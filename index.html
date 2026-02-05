@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>狐狸日历 | 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calendar-header">
+    <h1>🦊 狐狸日历 · 2026</h1>
+    <div>
+      <label for="month-select">跳转至：</label>
+      <select id="month-select">
+        <!-- 月份选项 -->
+        <script>
+          for (let m = 1; m <= 12; m++) {{
+            document.write(`<option value="${{m}}">${{m}} 月</option>`);
+          }}
+        </script>
+      </select>
+    </div>
+  </div>
+
+  <div id="calendar"></div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span id="popup-date"></span>
+      <p id="popup-message"></p>
+      <button onclick="closePopup()">关闭</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
