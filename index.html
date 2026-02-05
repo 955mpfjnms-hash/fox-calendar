@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>狐狸日历 | 2026</title>
+  <title>🦊狐狸日历 | 2026</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,14 +10,7 @@
     <h1>🦊 狐狸日历 · 2026</h1>
     <div>
       <label for="month-select">跳转至：</label>
-      <select id="month-select">
-        <!-- 月份选项 -->
-        <script>
-          for (let m = 1; m <= 12; m++) {{
-            document.write(`<option value="${{m}}">${{m}} 月</option>`);
-          }}
-        </script>
-      </select>
+      <select id="month-select"></select>
     </div>
   </div>
 
@@ -32,6 +24,15 @@
     </div>
   </div>
 
+  <script>
+    const select = document.getElementById("month-select");
+    for (let m = 1; m <= 12; m++) {
+      const option = document.createElement("option");
+      option.value = m;
+      option.innerText = `${m} 月`;
+      select.appendChild(option);
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
