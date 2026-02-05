@@ -4,7 +4,7 @@ let currentMonth = 1;
 
 // 初始化加载
 window.onload = async () => {
-  const res = await fetch("calendar_2026.json");
+  const res = await fetch("./calendar_2026.json");  // 修复路径
   calendarData = await res.json();
   renderCalendar(currentMonth);
   document.getElementById("month-select").addEventListener("change", (e) => {
